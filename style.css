@@ -578,6 +578,94 @@ a {
 
 /* ---------- Pestañas del catálogo ---------- */
 
+.buscador {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto 2.2rem;
+}
+
+.buscador-icono {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: var(--dorado);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.buscador input {
+  width: 100%;
+  font-family: var(--fuente-cuerpo);
+  font-size: 1.05rem;
+  color: var(--blanco);
+  background: rgba(16, 26, 44, 0.6);
+  border: 1px solid var(--dorado-tenue);
+  border-radius: 999px;
+  padding: 0.95rem 3.1rem 0.95rem 2.9rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buscador input::placeholder {
+  color: rgba(245, 245, 247, 0.4);
+  font-style: italic;
+}
+
+.buscador input:focus {
+  border-color: var(--dorado);
+  box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.25), 0 0 18px rgba(212, 175, 55, 0.1);
+}
+
+.buscador-limpiar {
+  position: absolute;
+  right: 0.55rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--dorado-suave);
+  background: transparent;
+  border: 1px solid var(--dorado-tenue);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.buscador-limpiar.visible {
+  display: inline-flex;
+}
+
+.buscador-limpiar:hover {
+  background: var(--dorado);
+  border-color: var(--dorado);
+  color: var(--azul-noche);
+}
+
+.sin-resultados {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: var(--fuente-subtitulos);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: rgba(245, 245, 247, 0.78);
+  border: 1px dashed var(--dorado-tenue);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  animation: aparecer 0.4s ease both;
+}
+
+.sr-term {
+  color: var(--dorado-suave);
+  font-weight: 600;
+}
+
 .tabs-botones {
   display: flex;
   gap: 0.4rem;
@@ -1077,6 +1165,15 @@ a {
 
   .tabs-botones {
     width: 100%;
+  }
+
+  .buscador {
+    margin-bottom: 1.6rem;
+  }
+
+  .buscador input {
+    font-size: 1rem;
+    padding: 0.85rem 3rem 0.85rem 2.7rem;
   }
 
   .tab-btn {
