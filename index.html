@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenshua Parfums y Variedades</title>
+  <meta name="description" content="Kenshua Parfums y Variedades — alta perfumería y una cuidada selección de accesorios y productos de cuidado personal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="Logo.jpeg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+    <div class="sidebar-marca">
+      <img class="logo" src="Logo.jpeg" alt="Kenshua Parfums y Variedades">
+      <div class="marca-texto">
+        <h2 class="marca-nombre">Kenshua</h2>
+        <span class="marca-sub">Parfums &amp; Variedades</span>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#inicio" class="nav-enlace">
+        <span class="nav-num">01</span>
+        <span class="nav-txt">Inicio</span>
+      </a>
+      <a href="#catalogo" class="nav-enlace">
+        <span class="nav-num">02</span>
+        <span class="nav-txt">Catálogo</span>
+      </a>
+      <a href="#nosotros" class="nav-enlace">
+        <span class="nav-num">03</span>
+        <span class="nav-txt">Sobre Nosotros</span>
+      </a>
+      <a href="#contacto" class="nav-enlace">
+        <span class="nav-num">04</span>
+        <span class="nav-txt">Contacto / Realizar Pedido</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <span class="linea-oro"></span>
+      <p>Fragancias que definen<br>presencia y carácter.</p>
+      <p class="est">Est. 2026</p>
+    </div>
+  </aside>
+
+  <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="overlay" id="overlay"></div>
+
+  <main class="contenido">
+
+    <section id="inicio" class="hero">
+      <p class="hero-kicker">Alta Perfumería · Variedades Exclusivas</p>
+      <img class="logo-hero" src="Logo.jpeg" alt="Logo Kenshua Parfums y Variedades">
+      <h1 class="hero-titulo">Kenshua Parfums<br>y Variedades</h1>
+      <p class="eslogan">Sutil, Sofisticado, Eterno</p>
+      <div class="hero-linea">
+        <span></span>
+      </div>
+      <a href="#catalogo" class="btn-oro">Descubrir Colección</a>
+    </section>
+
+    <section id="nosotros" class="seccion reveal">
+      <p class="seccion-etiqueta">Sobre Nosotros</p>
+      <h2 class="seccion-titulo">La Esencia de Kenshua</h2>
+      <div class="linea-oro seccion-linea"></div>
+      <p class="seccion-texto">
+        En <strong>Kenshua Parfums y Variedades</strong> vivimos la alta perfumería como un arte:
+        cada fragancia es seleccionada con pasión y criterio para acompañar la personalidad,
+        las ocasiones y el estilo de quienes la eligen. Colaboramos con casas árabes reconocidas
+        por su dedicación y excelencia olfativa, ofreciendo esencias duraderas, profundas y memorables.
+      </p>
+      <p class="seccion-texto">
+        Más allá de los perfumes, te ofrecemos una cuidada selección de variedades exclusivas de
+        accesorios y productos de cuidado personal, pensados para complementar tu rutina de belleza
+        y elevar tu día a día con un toque de distinción.
+      </p>
+    </section>
+
+    <section id="catalogo" class="seccion reveal">
+      <p class="seccion-etiqueta">Nuestros Productos</p>
+      <h2 class="seccion-titulo">Catálogo Kenshua</h2>
+      <div class="linea-oro seccion-linea"></div>
+
+      <div class="tabs">
+        <div class="tabs-botones" role="tablist">
+          <button class="tab-btn activo" id="tab-perfumes" type="button" role="tab" aria-selected="true" data-tab="perfumes">Perfumes</button>
+          <button class="tab-btn" id="tab-otros" type="button" role="tab" aria-selected="false" data-tab="otros">Otros Productos</button>
+        </div>
+
+        <div class="tab-panel activo" id="perfumes">
+          <div class="productos" id="productos"></div>
+          <noscript><p class="sin-js">Activa JavaScript para ver el catálogo de perfumes.</p></noscript>
+        </div>
+
+        <div class="tab-panel" id="otros">
+          <div class="proximamente">
+            <span class="proximamente-ornamento" aria-hidden="true">✦</span>
+            <h3 class="proximamente-titulo">Próximamente</h3>
+            <p class="proximamente-texto">
+              Estamos preparando una selección exclusiva de accesorios y productos de
+              cuidado personal. Nuevas novedades llegarán muy pronto a Kenshua.
+            </p>
+            <span class="linea-oro proximamente-linea"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion reveal">
+      <p class="seccion-etiqueta">Contacto</p>
+      <h2 class="seccion-titulo">Contáctanos o Realiza tu Pedido</h2>
+      <div class="linea-oro seccion-linea"></div>
+
+      <div class="contacto-grid">
+        <form class="formulario" id="contacto-form">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+          <label for="telefono">Teléfono / WhatsApp</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Tu número" required>
+
+          <label for="mensaje">Mensaje o Pedido</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos qué perfume te interesa..." required></textarea>
+
+          <button type="submit" class="btn-oro">Enviar por WhatsApp</button>
+        </form>
+
+        <div class="contacto-directo">
+          <p class="contacto-intro">Atendemos tus pedidos de forma directa:</p>
+
+          <a class="tarjeta-contacto" href="https://wa.me/50578612261" target="_blank" rel="noopener">
+            <span class="icono">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </span>
+            <span class="tarjeta-info">
+              <span class="tarjeta-titulo">WhatsApp</span>
+              <span class="tarjeta-valor">+505 7861 2261</span>
+            </span>
+          </a>
+
+          <a class="tarjeta-contacto" href="https://www.instagram.com/kenshuaperfums/" target="_blank" rel="noopener">
+            <span class="icono">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </span>
+            <span class="tarjeta-info">
+              <span class="tarjeta-titulo">Instagram</span>
+              <span class="tarjeta-valor">@kenshuaperfums</span>
+            </span>
+          </a>
+
+          <a class="tarjeta-contacto" href="https://www.facebook.com/profile.php?id=61594794803514" target="_blank" rel="noopener">
+            <span class="icono">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </span>
+            <span class="tarjeta-info">
+              <span class="tarjeta-titulo">Facebook</span>
+              <span class="tarjeta-valor">Kenshua Parfums</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <span class="linea-oro"></span>
+    <p>&copy; 2026 Kenshua Parfums y Variedades. Todos los derechos reservados.</p>
+  </footer>
+
+  <a class="boton-wa" href="https://wa.me/50578612261?text=Hola%2C%20me%20interesa%20un%20perfume%20de%20Kenshua%20Parfums" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="boton-wa-texto">WhatsApp</span>
+  </a>
+
+  <div class="modal" id="modal-perfume" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-fondo"></div>
+    <div class="modal-contenido">
+      <button class="modal-cerrar" id="modal-cerrar" aria-label="Cerrar">✕</button>
+      <div class="modal-imagen">
+        <img id="modal-imagen" src="" alt="" onerror="reemplazarImagen(this)">
+      </div>
+      <div class="modal-info">
+        <span class="modal-marca" id="modal-marca"></span>
+        <h3 class="modal-nombre" id="modal-nombre"></h3>
+        <p class="modal-precio" id="modal-precio"></p>
+        <span class="linea-oro modal-linea"></span>
+        <p class="modal-descripcion" id="modal-descripcion"></p>
+        <a class="btn-whatsapp modal-pedir" id="modal-pedir" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
