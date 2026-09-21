@@ -326,22 +326,6 @@ if ("IntersectionObserver" in window) {
   revelarTodo();
 }
 
-/* ---------- Formulario de contacto ---------- */
-
-document.getElementById("contacto-form").addEventListener("submit", (evento) => {
-  evento.preventDefault();
-
-  const nombre = document.getElementById("nombre").value.trim();
-  const telefono = document.getElementById("telefono").value.trim();
-  const mensaje = document.getElementById("mensaje").value.trim();
-
-  const textoPedido =
-    "Hola Kenshua Parfums, soy " + nombre +
-    " (teléfono: " + telefono + ").\n\n" + mensaje;
-
-  window.open(enlaceWhatsApp(textoPedido), "_blank", "noopener");
-});
-
 /* ---------- Botón flotante de WhatsApp ---------- */
 
 const botonWa = document.querySelector(".boton-wa");
