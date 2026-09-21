@@ -166,7 +166,7 @@ const contenedor = document.getElementById("productos");
 try {
   productos.forEach((producto, indice) => {
     const tarjeta = document.createElement("article");
-    tarjeta.classList.add("producto", "reveal");
+    tarjeta.classList.add("producto");
 
     const mensajePedido = "Hola, me interesa el perfume " + producto.nombre;
 
@@ -195,7 +195,6 @@ try {
       abrirModal(producto);
     });
 
-    tarjeta.style.transitionDelay = (indice % 2) * 0.08 + "s";
     contenedor.appendChild(tarjeta);
   });
 
@@ -293,19 +292,39 @@ botonesTab.forEach((boton) => {
 
 /* ---------- Aparición al hacer scroll ---------- */
 
-const revelar = new IntersectionObserver(
-  (entradas) => {
-    entradas.forEach((entrada) => {
-      if (entrada.isIntersecting) {
-        entrada.target.classList.add("visible");
-        revelar.unobserve(entrada.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
+const elementosRevelar = document.querySelectorAll(".reveal");
 
-document.querySelectorAll(".reveal").forEach((elemento) => revelar.observe(elemento));
+function revelarTodo() {
+  elementosRevelar.forEach((el) => el.classList.add("visible"));
+}
+
+if ("IntersectionObserver" in window) {
+  const revelar = new IntersectionObserver(
+    (entradas) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add("visible");
+          revelar.unobserve(entrada.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  elementosRevelar.forEach((elemento) => revelar.observe(elemento));
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.querySelectorAll(".reveal:not(.visible)").forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          el.classList.add("visible");
+        }
+      });
+    }, 400);
+  });
+} else {
+  revelarTodo();
+}
 
 /* ---------- Formulario de contacto ---------- */
 

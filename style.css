@@ -1083,10 +1083,6 @@ a {
     gap: 2.5rem;
   }
 
-  .productos {
-    grid-template-columns: 1fr;
-  }
-
   .logo-hero {
     width: 130px;
     height: 130px;
@@ -1124,6 +1120,89 @@ a {
 
   .modal-info {
     padding: 2rem 1.5rem 1.75rem;
+  }
+
+  .tabs-botones {
+    width: 100%;
+  }
+
+  .tab-btn {
+    flex: 1;
+    text-align: center;
+    font-size: 1.05rem;
+    padding: 0.85rem 0.5rem 0.95rem;
+  }
+
+  .productos {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .producto {
+    flex-direction: row;
+    border-radius: 8px;
+  }
+
+  .producto-imagen {
+    flex: 0 0 42%;
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 150px;
+    max-height: 200px;
+    align-self: stretch;
+    border-bottom: none;
+    border-right: 1px solid var(--dorado-tenue);
+    padding: 6px;
+  }
+
+  .producto-info {
+    flex: 1;
+    padding: 1rem 1rem 1.1rem;
+    gap: 0.45rem;
+    min-width: 0;
+  }
+
+  .producto-nombre {
+    font-size: 1.2rem;
+    line-height: 1.25;
+  }
+
+  .producto-casa {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+  }
+
+  .producto-precio {
+    font-size: 1.05rem;
+  }
+
+  .producto .btn-ver {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+  }
+
+  .producto .btn-whatsapp {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+  }
+
+  .producto .btn-whatsapp svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .proximamente {
+    padding: 3rem 1.25rem;
+  }
+
+  .proximamente-texto {
+    font-size: 1rem;
   }
 }
 
