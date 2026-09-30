@@ -6,9 +6,9 @@
   --dorado-suave: #E2C775;
   --dorado-tenue: rgba(212, 175, 55, 0.22);
   --blanco: #F5F5F7;
-  --fuente-titulos: 'Cinzel', serif;
-  --fuente-subtitulos: 'Cormorant Garamond', serif;
-  --fuente-cuerpo: 'Times New Roman', Times, serif;
+  --fuente-titulos: 'Playfair Display', 'Times New Roman', serif;
+  --fuente-subtitulos: 'Playfair Display', 'Times New Roman', serif;
+  --fuente-cuerpo: 'Lora', 'Times New Roman', serif;
 }
 
 * {
