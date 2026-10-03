@@ -429,13 +429,40 @@ if ("IntersectionObserver" in window) {
 
 const avisoOffline = document.getElementById("aviso-offline");
 
-function actualizarEstadoConexion() {
-  avisoOffline.hidden = navigator.onLine;
+function mostrarAviso() {
+  avisoOffline.hidden = false;
 }
 
-window.addEventListener("online", actualizarEstadoConexion);
-window.addEventListener("offline", actualizarEstadoConexion);
-actualizarEstadoConexion();
+function ocultarAviso() {
+  avisoOffline.hidden = true;
+}
+
+function sincronizarEstado() {
+  if (navigator.onLine) {
+    ocultarAviso();
+  } else {
+    mostrarAviso();
+  }
+}
+
+function verificarRedReal() {
+  fetch(location.origin, { method: "HEAD", cache: "no-store" })
+    .then(ocultarAviso)
+    .catch(mostrarAviso);
+}
+
+window.addEventListener("online", sincronizarEstado);
+window.addEventListener("offline", sincronizarEstado);
+window.addEventListener("load", () => {
+  sincronizarEstado();
+  setTimeout(verificarRedReal, 400);
+});
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) {
+    verificarRedReal();
+  }
+});
+sincronizarEstado();
 
 /* ---------- Botón flotante de WhatsApp ---------- */
 
