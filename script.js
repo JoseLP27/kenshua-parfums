@@ -430,11 +430,7 @@ if ("IntersectionObserver" in window) {
 const avisoOffline = document.getElementById("aviso-offline");
 
 function actualizarEstadoConexion() {
-  const sinConexion = !navigator.onLine;
-  if (avisoOffline.hidden === sinConexion) {
-    return;
-  }
-  avisoOffline.hidden = sinConexion;
+  avisoOffline.hidden = navigator.onLine;
 }
 
 window.addEventListener("online", actualizarEstadoConexion);
