@@ -425,45 +425,6 @@ if ("IntersectionObserver" in window) {
   revelarTodo();
 }
 
-/* ---------- Aviso de conexión ---------- */
-
-const avisoOffline = document.getElementById("aviso-offline");
-
-function mostrarAviso() {
-  avisoOffline.hidden = false;
-}
-
-function ocultarAviso() {
-  avisoOffline.hidden = true;
-}
-
-function sincronizarEstado() {
-  if (navigator.onLine) {
-    ocultarAviso();
-  } else {
-    mostrarAviso();
-  }
-}
-
-function verificarRedReal() {
-  fetch(location.origin, { method: "HEAD", cache: "no-store" })
-    .then(ocultarAviso)
-    .catch(mostrarAviso);
-}
-
-window.addEventListener("online", sincronizarEstado);
-window.addEventListener("offline", sincronizarEstado);
-window.addEventListener("load", () => {
-  sincronizarEstado();
-  setTimeout(verificarRedReal, 400);
-});
-document.addEventListener("visibilitychange", () => {
-  if (!document.hidden) {
-    verificarRedReal();
-  }
-});
-sincronizarEstado();
-
 /* ---------- Botón flotante de WhatsApp ---------- */
 
 const botonWa = document.querySelector(".boton-wa");
