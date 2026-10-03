@@ -8,7 +8,8 @@
   --blanco: #F5F5F7;
   --fuente-titulos: 'Playfair Display', 'Times New Roman', serif;
   --fuente-subtitulos: 'Playfair Display', 'Times New Roman', serif;
-  --fuente-cuerpo: 'Lora', 'Times New Roman', serif;
+  --fuente-cuerpo: 'Arial', 'Helvetica', sans-serif;
+  --fuente-ui: 'Arial', 'Helvetica', sans-serif;
 }
 
 * {
@@ -191,7 +192,7 @@ a {
 
 .sidebar-footer p {
   font-size: 0.88rem;
-  font-style: italic;
+  font-style: normal;
   color: rgba(245, 245, 247, 0.55);
   line-height: 1.6;
 }
@@ -359,10 +360,10 @@ a {
 
 .btn-oro {
   display: inline-block;
-  font-family: var(--fuente-titulos);
-  font-size: 0.82rem;
+  font-family: var(--fuente-ui);
+  font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--dorado-suave);
   border: 1px solid var(--dorado);
@@ -412,10 +413,13 @@ a {
 }
 
 .seccion-texto {
-  font-size: 1.08rem;
-  line-height: 1.9;
-  color: rgba(245, 245, 247, 0.82);
-  margin-bottom: 1.2rem;
+  font-family: var(--fuente-ui);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  font-weight: 400;
+  text-align: left;
+  color: rgba(245, 245, 247, 0.84);
+  margin-bottom: 1.15rem;
   max-width: 70ch;
 }
 
@@ -433,9 +437,8 @@ a {
 }
 
 .sin-js {
-  font-style: italic;
-  font-size: 1.05rem;
-  color: rgba(245, 245, 247, 0.7);
+  font-size: 1rem;
+  color: rgba(245, 245, 247, 0.72);
   border: 1px dashed var(--dorado-tenue);
   border-radius: 8px;
   padding: 1.5rem;
@@ -513,24 +516,16 @@ a {
   margin-top: 0.2rem;
 }
 
-.producto-desc {
-  font-size: 0.98rem;
-  font-style: italic;
-  line-height: 1.7;
-  color: rgba(245, 245, 247, 0.72);
-  flex: 1;
-}
-
 .btn-ver {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
   padding: 0.75rem 1rem;
-  font-family: var(--fuente-titulos);
-  font-size: 0.72rem;
+  font-family: var(--fuente-ui);
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--dorado-suave);
   border: 1px solid var(--dorado-tenue);
@@ -552,10 +547,10 @@ a {
   justify-content: center;
   gap: 0.5rem;
   margin-top: 1rem;
-  font-family: var(--fuente-titulos);
-  font-size: 0.72rem;
+  font-family: var(--fuente-ui);
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--dorado-suave);
   border: 1px solid var(--dorado-tenue);
@@ -611,7 +606,6 @@ a {
 
 .buscador input::placeholder {
   color: rgba(245, 245, 247, 0.4);
-  font-style: italic;
 }
 
 .buscador input:focus {
@@ -651,9 +645,9 @@ a {
 .sin-resultados {
   grid-column: 1 / -1;
   text-align: center;
-  font-family: var(--fuente-subtitulos);
-  font-size: 1.25rem;
-  font-style: italic;
+  font-family: var(--fuente-ui);
+  font-size: 1.1rem;
+  font-weight: 400;
   color: rgba(245, 245, 247, 0.78);
   border: 1px dashed var(--dorado-tenue);
   border-radius: 8px;
@@ -675,10 +669,10 @@ a {
 
 .tab-btn {
   position: relative;
-  font-family: var(--fuente-subtitulos);
-  font-size: 1.15rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
+  font-family: var(--fuente-ui);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   color: rgba(245, 245, 247, 0.65);
   background: transparent;
   border: none;
@@ -750,10 +744,11 @@ a {
 }
 
 .proximamente-texto {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  font-style: italic;
-  color: rgba(245, 245, 247, 0.72);
+  font-family: var(--fuente-ui);
+  font-size: 1rem;
+  line-height: 1.65;
+  font-weight: 400;
+  color: rgba(245, 245, 247, 0.74);
   max-width: 52ch;
 }
 
@@ -805,9 +800,9 @@ a {
   max-height: 90vh;
   overflow-y: auto;
   background: linear-gradient(180deg, #101A2C 0%, #0A111E 100%);
-  border: 1px solid var(--dorado);
+  border: 1px solid var(--dorado-tenue);
   border-radius: 10px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 60px rgba(212, 175, 55, 0.12);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
   animation: modalEntrada 0.45s ease both;
 }
 
@@ -870,7 +865,7 @@ a {
 .modal-info {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.7rem;
   padding: 3rem 2.4rem 2.4rem;
 }
 
@@ -897,20 +892,20 @@ a {
   color: var(--dorado-suave);
 }
 
-.modal-linea {
-  margin: 0.6rem 0;
-  max-width: 140px;
-}
-
 .modal-descripcion {
-  font-size: 1.02rem;
-  line-height: 1.85;
-  color: rgba(245, 245, 247, 0.82);
+  font-family: var(--fuente-ui);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  text-align: left;
+  color: rgba(245, 245, 247, 0.85);
+  margin-top: 0.3rem;
 }
 
 .modal-pedir {
   justify-content: center;
-  margin-top: 1rem;
+  width: 100%;
+  margin-top: 1.5rem;
 }
 
 .modal-pedir svg {
@@ -933,9 +928,9 @@ a {
 }
 
 .contacto-intro {
-  font-family: var(--fuente-subtitulos);
-  font-size: 1.2rem;
-  font-style: italic;
+  font-family: var(--fuente-ui);
+  font-size: 1.1rem;
+  font-weight: 400;
   color: rgba(245, 245, 247, 0.8);
   margin-bottom: 1.4rem;
   grid-column: 1 / -1;
@@ -1069,10 +1064,10 @@ a {
 }
 
 .boton-wa-texto {
-  font-family: var(--fuente-titulos);
-  font-size: 0.8rem;
+  font-family: var(--fuente-ui);
+  font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
@@ -1230,16 +1225,16 @@ a {
     margin-top: 0.5rem;
     width: 100%;
     padding: 0.7rem 0.5rem;
-    font-size: 0.62rem;
-    letter-spacing: 0.14em;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
   }
 
   .producto .btn-whatsapp {
     margin-top: 0.5rem;
     width: 100%;
     padding: 0.7rem 0.5rem;
-    font-size: 0.62rem;
-    letter-spacing: 0.14em;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
   }
 
   .producto .btn-whatsapp svg {

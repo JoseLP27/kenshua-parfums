@@ -6,133 +6,133 @@ const productos = [
     marca: "Afnan",
     precio: 45,
     imagen: "Perfumes/9AMDiveAfnan.jpeg",
-    descripcion: "Una fragancia refrescante y dinámica. Abre con notas efervescentes de limón, menta, grosella negra y manzana, evolucionando hacia un corazón marino y de pimienta rosa, sobre un fondo elegante de cedro, sándalo y ámbar."
+    descripcion: "Una fragancia fresca y limpia para el día a día. Se siente cítrica y acuática, con un carácter ligero que va bien con el clima cálido y los planes informales."
   },
   {
     nombre: "9 PM",
     marca: "Afnan",
     precio: 45,
     imagen: "Perfumes/9PM.jpeg",
-    descripcion: "Un perfume nocturno seductor y dulce. Destaca por su salida frutal de manzana silvestre, canela y bergamota, seguida por lavanda y azahar, descansando sobre una rica base de vainilla, haba tonka, ámbar y maderas."
+    descripcion: "Un perfume dulce con aire goloso, pensado para salidas de noche. Tiene calidez y un toque festivo que lo hace cómodo de llevar en eventos y reuniones."
   },
   {
     nombre: "9 PM Elixir",
     marca: "Afnan",
     precio: 50,
     imagen: "Perfumes/9PMElixir.jpeg",
-    descripcion: "Una versión aún más concentrada y profunda de la icónica 9 PM. Potencia las notas de especias cálidas, resinas preciosas y una vainilla ambarada ultra duradera proyectando gran presencia."
+    descripcion: "Una versión más densa y especiada de 9 PM, para quien ya conoce la línea y prefiere algo más intenso. Funciona bien en climas fríos y ocasiones especiales."
   },
   {
     nombre: "9 PM Night Out",
     marca: "Afnan",
     precio: 48,
     imagen: "Perfumes/9PMNightOut.jpeg",
-    descripcion: "Diseñado para la vida nocturna y eventos especiales. Combina acordes dulces, toques de especias aromáticas y maderas intensas que garantizan fijación de larga duración."
+    descripcion: "Otro lado de la línea 9 PM, con un aire más nocturno. Combina la dulzura característica con un toque de especias y se siente festivo. Pensado para salir de noche."
   },
   {
     nombre: "Yum Yum",
     marca: "Armaf",
     precio: 42,
     imagen: "Perfumes/ArmarfYumYum.jpeg",
-    descripcion: "Una fragancia gourmand juguetona y envolvente. Combina frutas tropicales maduras, toques de vainilla cremoso y acordes de repostería fina ideal para un estilo jovial y dulce."
+    descripcion: "Un gourmand juguetón y dulce, con aire de postre. Se siente goloso y alegre, ideal para quienes prefieren aromas que huelen rico y quieren algo distinto al clásico de oficina."
   },
   {
     nombre: "Asad Elixir",
     marca: "Lattafa",
     precio: 50,
     imagen: "Perfumes/AsadElixirLattafa.jpeg",
-    descripcion: "Una interpretación magistral y lujosa de Asad. Inicia con azafrán y pimienta, revelando un corazón rico de especias finas y un fondo imponente de oud, ámbar y vainilla negra."
+    descripcion: "Un oriental especiado con carácter oscuro. Combina la calidez de las especias con un fondo amaderado y ámbar, y se siente denso y envolvente. Para quienes buscan un aroma con personalidad."
   },
   {
     nombre: "Asad Bourbon",
     marca: "Lattafa",
     precio: 52,
     imagen: "Perfumes/AssadBourbon.jpeg",
-    descripcion: "Un perfume cálido y sofisticado. Incorpora acordes de licor añejado, haba tonka ahumada, bálsamos y maderas preciosas con un toque refinado de vainilla Bourbon."
+    descripcion: "Un aroma cálido con un guiño de licor y algo de dulzura suave. Es más sobrio que el resto de la línea y cae bien en climas fríos y noches de plan tranquilo."
   },
   {
     nombre: "Asad",
     marca: "Lattafa",
     precio: 45,
     imagen: "Perfumes/AssadLattfa.jpeg",
-    descripcion: "Uno de los perfumes árabes más aclamados mundialmente. Abre con piña, pimienta negra y especias, abriendo paso a notas de café, iris y tabaco sobre un fondo balsámico y dulce de ámbar y vainilla."
+    descripcion: "Uno de los perfumes con más seguidores de Lattafa. Mezcla especias y vainilla en un aroma masculino, cálido y versátil, que funciona tanto de día como de noche."
   },
   {
     nombre: "Club de Nuit Iconic",
     marca: "Armaf",
     precio: 55,
     imagen: "Perfumes/ClubdeNuitIcolnic.jpeg",
-    descripcion: "Una fragancia fresca, azul y sumamente versátil. Mezcla notas cítricas brillantes como toronja y limón con un toque picante de jengibre, menta e incienso amaderado."
+    descripcion: "Una fragancia fresca y cítrica, de esas que se sienten limpias y azules. Es muy versátil: acomoda bien en el trabajo y en salidas informales, sin complicaciones."
   },
   {
     nombre: "Club de Nuit Intense Man",
     marca: "Armaf",
     precio: 48,
     imagen: "Perfumes/ClubdeNuitIntenseMan.jpeg",
-    descripcion: "El rey indiscutible de los cumplidos. Salida ahumada y cítrica de limón, piña y grosellas negras, combinada con abedul, jazmín, almizcle y ámbar gris de proyección legendaria."
+    descripcion: "Un clásico entre quienes buscan un perfume con carácter. Tiene una salida cítrica con un toque ahumado y se siente marcado y masculino. Muy popular para ocasiones en las que se quiere destacar."
   },
   {
     nombre: "Club de Nuit Urban Man Elixir",
     marca: "Armaf",
     precio: 52,
     imagen: "Perfumes/ClubdeNuitUrbanManElixir.jpeg",
-    descripcion: "Una fusión moderna que equilibra tonos limpios, especiados y aromáticos. Destaca por notas de flor de azahar, lavanda, pimienta y un fondo ambarado duradero."
+    descripcion: "Una versión más moderna y limpia de la línea Club de Nuit. Es fresca, aromática y equilibrada, con un carácter urbano. Buena opción diaria que no se siente pesada."
   },
   {
     nombre: "Hawas Ice",
     marca: "Rasasi",
     precio: 60,
     imagen: "Perfumes/HawasIce.jpeg",
-    descripcion: "La variante ultra fresca y congelada de Hawas. Inicia con manzana crujiente, cítricos helados y menta fresca, matizada con cardamomo y un fondo marino de musgo de roble y ámbar gris."
+    descripcion: "La versión más fresca de la familia Hawas. Tiene un aire acuático que se siente limpio y liviano, ideal para el calor y los looks deportivos."
   },
   {
     nombre: "Hawas Tropical",
     marca: "Rasasi",
     precio: 60,
     imagen: "Perfumes/HawasTropical.jpeg",
-    descripcion: "Una explosión frutal exótica inspirada en islas paradisíacas. Integra notas jugosas de frutas tropicales con acentos acuáticos y un fondo limpio amaderado."
+    descripcion: "Una fragancia frutal y dulce con espíritu veraniego. Se siente jugosa y tropical, perfecta para climas cálidos y para quienes disfrutan de aromas alegres."
   },
   {
     nombre: "Khamrah Dukan",
     marca: "Lattafa",
     precio: 55,
     imagen: "Perfumes/KhamrahDukan.jpeg",
-    descripcion: "Una variación intensa con acentos ahumados de resinas y especias tradicionales orientales, combinadas con la dulzura característica de la línea Khamrah."
+    descripcion: "Una variante de Khamrah con más resina y especias. Se siente cálida, con la dulzura de la línea y un fondo un poco ahumado. Para quienes quieren lo goloso con más cuerpo."
   },
   {
     nombre: "Khamrah",
     marca: "Lattafa",
     precio: 50,
     imagen: "Perfumes/KhamrahLattfa.jpeg",
-    descripcion: "Una joya dulce y gourmand. Abre con canela, nuez moscada y bergamota, evolucionando hacia un corazón de praliné, fechas y tuberosa, sellando con vainilla de Madagascar y mirra."
+    descripcion: "Un gourmand dulce y especiado que se ha vuelto muy popular. Huele a canela, vainilla y dátiles, con un aire cálido y confortable. Ideal para climas fríos y reuniones de noche."
   },
   {
     nombre: "Khamrah Qahwa",
     marca: "Lattafa",
     precio: 55,
     imagen: "Perfumes/KhamrahQahwa.jpeg",
-    descripcion: "La aclamada versión enriquecida con café arábigo tostado. Agrega notas profundas de espresso, cardamomo dulce y praliné a la fórmula original de Khamrah."
+    descripcion: "La versión de Khamrah con un giro de café. Mantiene la dulzura y las especias, pero se nota más tostado y cálido. Para quienes prefieren el dulce con un punto más seco."
   },
   {
     nombre: "Khamrah Waha",
     marca: "Lattafa",
     precio: 52,
     imagen: "Perfumes/KhamrahWaha.jpeg",
-    descripcion: "Una interpretación enriquecida con matices balsámicos suaves y florales especiados, conservando una base dulce, rica y cálida."
+    descripcion: "Una versión más suave y redonda de Khamrah. Se siente cálida y menos especiada, fácil de llevar en el día a día de clima templado o frío."
   },
   {
     nombre: "Odyssey Homme",
     marca: "Armaf",
     precio: 45,
     imagen: "Perfumes/OdysseyHomme.jpeg",
-    descripcion: "Una fragancia elegante y atalcada. Combina iris elegante, notas orientales de ámbar, vainilla gourmand y toques suaves de cuero que proyectan refinamiento."
+    descripcion: "Un aroma elegante, empolvado y con un toque dulce. Es sobrio y se siente pulido, buena opción para el trabajo o para eventos formales."
   },
   {
     nombre: "Odyssey Mandarin Sky",
     marca: "Armaf",
     precio: 48,
     imagen: "Perfumes/OdysseyMandarinSky.jpeg",
-    descripcion: "Un perfume vibrante dulce y cítrico. Destaca por notas de mandarina jugosa, naranja dulce, caramelo salado, salvia y haba tonka dulce sobre vetiver."
+    descripcion: "Un cítrico dulce con aire de caramelo. La mandarina se nota desde el inicio y el conjunto queda goloso y alegre. Para quienes buscan un aroma frutal fácil de usar."
   }
 ];
 
@@ -287,7 +287,11 @@ const modalPrecio = document.getElementById("modal-precio");
 const modalDescripcion = document.getElementById("modal-descripcion");
 const modalPedir = document.getElementById("modal-pedir");
 
+let elementoAnterior = null;
+
 function abrirModal(producto) {
+  elementoAnterior = document.activeElement;
+
   modalImagen.src = producto.imagen;
   modalImagen.alt = producto.nombre + " de " + producto.marca;
   modalMarca.textContent = producto.marca;
@@ -299,20 +303,44 @@ function abrirModal(producto) {
   modal.classList.add("abierto");
   modal.setAttribute("aria-hidden", "false");
   document.body.classList.add("no-scroll");
+
+  document.getElementById("modal-cerrar").focus();
 }
 
 function cerrarModal() {
   modal.classList.remove("abierto");
   modal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("no-scroll");
+
+  if (elementoAnterior && typeof elementoAnterior.focus === "function") {
+    elementoAnterior.focus();
+  }
 }
 
 document.getElementById("modal-cerrar").addEventListener("click", cerrarModal);
 document.querySelector(".modal-fondo").addEventListener("click", cerrarModal);
 
 document.addEventListener("keydown", (evento) => {
-  if (evento.key === "Escape") {
+  if (evento.key === "Escape" && modal.classList.contains("abierto")) {
     cerrarModal();
+    return;
+  }
+
+  if (evento.key === "Tab" && modal.classList.contains("abierto")) {
+    const focables = modal.querySelectorAll('button, [href], input, [tabindex]:not([tabindex="-1"])');
+    if (focables.length === 0) {
+      return;
+    }
+    const primero = focables[0];
+    const ultimo = focables[focables.length - 1];
+
+    if (evento.shiftKey && document.activeElement === primero) {
+      evento.preventDefault();
+      ultimo.focus();
+    } else if (!evento.shiftKey && document.activeElement === ultimo) {
+      evento.preventDefault();
+      primero.focus();
+    }
   }
 });
 
