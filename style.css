@@ -1083,6 +1083,54 @@ a {
   }
 }
 
+/* ---------- Aviso de conexión ---------- */
+
+.aviso-offline {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1250;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: calc(100% - 2rem);
+  margin-top: 1rem;
+  padding: 0.7rem 1.3rem;
+  font-family: var(--fuente-ui);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--blanco);
+  background: rgba(16, 26, 44, 0.96);
+  border: 1px solid var(--dorado-tenue);
+  border-radius: 999px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  animation: avisoEntrada 0.4s ease both;
+}
+
+.aviso-offline[hidden] {
+  display: none;
+}
+
+.aviso-offline svg {
+  width: 18px;
+  height: 18px;
+  color: var(--dorado);
+  flex-shrink: 0;
+}
+
+@keyframes avisoEntrada {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -16px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
 /* ---------- Responsivo ---------- */
 
 @media (max-width: 960px) {

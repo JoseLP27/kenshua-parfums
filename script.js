@@ -425,6 +425,22 @@ if ("IntersectionObserver" in window) {
   revelarTodo();
 }
 
+/* ---------- Aviso de conexión ---------- */
+
+const avisoOffline = document.getElementById("aviso-offline");
+
+function actualizarEstadoConexion() {
+  const sinConexion = !navigator.onLine;
+  if (avisoOffline.hidden === sinConexion) {
+    return;
+  }
+  avisoOffline.hidden = sinConexion;
+}
+
+window.addEventListener("online", actualizarEstadoConexion);
+window.addEventListener("offline", actualizarEstadoConexion);
+actualizarEstadoConexion();
+
 /* ---------- Botón flotante de WhatsApp ---------- */
 
 const botonWa = document.querySelector(".boton-wa");
