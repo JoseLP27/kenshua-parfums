@@ -133,6 +133,160 @@ const productos = [
     precio: 48,
     imagen: "Perfumes/OdysseyMandarinSky.jpeg",
     descripcion: "Un cítrico dulce con aire de caramelo. La mandarina se nota desde el inicio y el conjunto queda goloso y alegre. Para quienes buscan un aroma frutal fácil de usar."
+  },
+  {
+    nombre: "Club de Nuit Élite",
+    marca: "Armaf",
+    precio: 60,
+    imagen: "Perfumes/ClubdeNuitElite.jpeg",
+    descripcion: "Una fragancia cítrica y aromática con un aire fresco y verde. Abre con bergamota, té verde y pimienta, y se asienta en un fondo amaderado de vetiver, cedro y ámbar. Elegante y moderna, ideal para ocasiones formales o para destacar de noche."
+  },
+  {
+    nombre: "Club de Nuit Lionheart Man",
+    marca: "Armaf",
+    precio: 55,
+    imagen: "Perfumes/ClubdeNuitLionheartMan.jpeg",
+    descripcion: "Un aroma cálido y especiado con un toque dulce. Combina menta y lavanda en la salida con un fondo de vainilla, benjuí, miel, haba tonka y tabaco. Masculino y envolvente, pensado para climas fríos y noches especiales."
+  },
+  {
+    nombre: "Club de Nuit Precieux",
+    marca: "Armaf",
+    precio: 60,
+    imagen: "Perfumes/ClubdeNuitPrecieux.jpeg",
+    descripcion: "Una fragancia lujosa y versátil que mezcla cítricos, frutas y especias. Se siente fresca al inicio y luego despliega un fondo de ámbar, vainilla, cuero y maderas. Sofisticada y con buena estela, para el día o la noche."
+  },
+  {
+    nombre: "9 PM Rebel",
+    marca: "Afnan",
+    precio: 50,
+    imagen: "Perfumes/9PMRebel.jpeg",
+    descripcion: "Un perfume dulce, tropical y amaderado que deja huella. La piña y el caramelo se combinan con maderas secas, musgo de roble y ámbar gris. Juvenil y con buena proyección, ideal para salidas nocturnas."
+  },
+  {
+    nombre: "9 AM Pour Femme",
+    marca: "Afnan",
+    precio: 45,
+    imagen: "Perfumes/9AMPourFemme.jpeg",
+    descripcion: "Una fragancia femenina fresca y frutal. Abre con toronja y bergamota, sigue con frambuesa y grosellas negras, y cierra con almizcle y naranja. Ligera y fácil de llevar para el día a día."
+  },
+  {
+    nombre: "Club de Nuit Woman",
+    marca: "Armaf",
+    precio: 50,
+    imagen: "Perfumes/ClubdeNuitWoman.jpeg",
+    descripcion: "Un aroma floral y frutal con carácter elegante. Combina naranja, toronja, durazno, rosa, jazmín y lichi sobre una base de vainilla, almizcle y vetiver. Versátil y femenino, para el trabajo o una salida."
+  },
+  {
+    nombre: "Club de Nuit Maleka",
+    marca: "Armaf",
+    precio: 55,
+    imagen: "Perfumes/ClubdeNuitMaleka.jpeg",
+    descripcion: "Una fragancia dulce y envolvente con un toque gourmand. La bergamota y el lichi dan paso a un corazón de raíz de lirio y un fondo de praliné, sándalo y ambroxan. Sofisticada y cálida, para ocasiones especiales."
+  },
+  {
+    nombre: "Club de Nuit Untold",
+    marca: "Armaf",
+    precio: 55,
+    imagen: "Perfumes/ClubdeNuitUntold.jpeg",
+    descripcion: "Un perfume ámbar y amaderado, cálido y sofisticado. Abre con azafrán y jazmín, y se asienta en amberwood, ámbar gris, resina de abeto y cedro. Intenso y elegante, ideal para la noche y el clima frío."
+  },
+  {
+    nombre: "9 PM Pour Femme",
+    marca: "Afnan",
+    precio: 45,
+    imagen: "Perfumes/9PMPourFemme.jpeg",
+    descripcion: "Una fragancia femenina floral y frutal con un fondo atalcado. La frambuesa y el ciprés se mezclan con rosa, violeta, pino y cedro. Dulce y versátil, funciona bien de día o de noche."
+  },
+  {
+    nombre: "Odyssey Artisto",
+    marca: "Armaf",
+    precio: 50,
+    imagen: "Perfumes/OdysseyArtisto.jpeg",
+    descripcion: "Un aroma dulce y cremoso con un toque tropical. Combina coco, vainilla, frutas tropicales, bergamota y haba tonka sobre un fondo de ámbar. Moderno y versátil, para quienes buscan algo cálido y agradable."
+  },
+  {
+    nombre: "Odyssey Marshmallow",
+    marca: "Armaf",
+    precio: 50,
+    imagen: "Perfumes/OdysseyMarshmallow.jpeg",
+    descripcion: "Una fragancia gourmand cremosa y frutal. Abre con coco, manzana y limón, sigue con malvavisco, fresa, durazno y frambuesa, y cierra con queso mascarpone, praliné, vainilla y ámbar. Dulce y juvenil, ideal para el día."
+  },
+  {
+    nombre: "Odyssey Mega Man",
+    marca: "Armaf",
+    precio: 48,
+    imagen: "Perfumes/OdysseyMegaMan.jpeg",
+    descripcion: "Un perfume cítrico, aromático y fresco con un fondo amaderado. Limón, jengibre, bergamota, piña, naranja y menta le dan energía, mientras el ámbar y las maderas lo redondean. Muy versátil para el día a día."
+  },
+  {
+    nombre: "Odyssey Aqua Edition",
+    marca: "Armaf",
+    precio: 48,
+    imagen: "Perfumes/OdysseyAquaEdition.jpeg",
+    descripcion: "Una fragancia fresca y acuática con carácter aromático. Menta, naranja, toronja, lavanda, ciprés y ambroxan se combinan en un aroma limpio y moderno. Ideal para el calor y el uso diario."
+  },
+  {
+    nombre: "Odyssey Limoni Fresh",
+    marca: "Armaf",
+    precio: 48,
+    imagen: "Perfumes/OdysseyLimoniFresh.jpeg",
+    descripcion: "Un cítrico fresco y luminoso con un toque verde. Limón, té, naranja, bergamota, mandarina y azahar crean una sensación limpia y vibrante. Perfecto para el día, especialmente en clima cálido."
+  },
+  {
+    nombre: "Odyssey Revolution Ultra Edition",
+    marca: "Armaf",
+    precio: 50,
+    imagen: "Perfumes/OdysseyRevolutionUltraEdition.jpeg",
+    descripcion: "Un aroma dulce y afrutado con un fondo cálido y especiado. La piña, el praliné y la grosella negra se mezclan con vainilla, pachulí y naranja sanguina. Moderno y con buena estela, para el día o la noche."
+  },
+  {
+    nombre: "Odyssey Homme White Edition",
+    marca: "Armaf",
+    precio: 50,
+    imagen: "Perfumes/OdysseyHommeWhiteEdition.jpeg",
+    descripcion: "Una versión amaderada y aromática de Odyssey Homme. Combina madera de ámbar, vainilla, cardamomo, cedro, pimienta rosa y salvia en un aroma cálido y elegante. Versátil para el día a día y ocasiones formales."
+  },
+  {
+    nombre: "Odyssey Spectra",
+    marca: "Armaf",
+    precio: 50,
+    imagen: "Perfumes/OdysseySpectra.jpeg",
+    descripcion: "Una fragancia cálida y especiada con un toque dulce. Lavanda, vainilla, canela, ámbar, tabaco y manzana se unen en un aroma envolvente y con personalidad. Ideal para la noche y el clima frío."
+  },
+  {
+    nombre: "Odyssey Tyrant Special Edition",
+    marca: "Armaf",
+    precio: 52,
+    imagen: "Perfumes/OdysseyTyrantSpecialEdition.jpeg",
+    descripcion: "Un perfume fresco, cítrico y especiado con fondo amaderado. Toronja, cítricos, pimienta, lavanda, ambroxan y notas amaderadas le dan un carácter moderno y versátil. Para el día a día y salidas informales."
+  },
+  {
+    nombre: "Odyssey Mandarin Sky Vintage Edition",
+    marca: "Armaf",
+    precio: 52,
+    imagen: "Perfumes/OdysseyMandarinSkyVintageEdition.jpeg",
+    descripcion: "Una edición especial de Mandarin Sky, cítrica, amaderada y cálida. La mandarina y los cítricos abren paso a notas amaderadas, especiadas y florales con un fondo de ámbar. Elegante y versátil, para el día o la noche."
+  },
+  {
+    nombre: "Odyssey Toffee Coffee",
+    marca: "Armaf",
+    precio: 50,
+    imagen: "Perfumes/OdysseyToffeeCoffee.jpeg",
+    descripcion: "Un gourmand dulce y cálido con aroma a café y caramelo. Café, toffee, azúcar, vainilla y lactonas se combinan en un perfume cremoso y adictivo. Ideal para el clima frío y las salidas nocturnas."
+  },
+  {
+    nombre: "Odyssey Mandarin Sky Elixir",
+    marca: "Armaf",
+    precio: 52,
+    imagen: "Perfumes/OdysseyMandarinSkyElixir.jpeg",
+    descripcion: "Una versión más intensa de Mandarin Sky. Mandarina, caramelo, vainilla, naranja, haba tonka y lavanda crean un aroma cítrico, dulce y cálido. Con buena estela, para quienes buscan destacar."
+  },
+  {
+    nombre: "Odyssey Bahamas",
+    marca: "Armaf",
+    precio: 48,
+    imagen: "Perfumes/OdysseyBahamas.jpeg",
+    descripcion: "Una fragancia marina y acuática con un toque afrutado y salado. Agua de mar, melón, cantalupo y pera se combinan en un aroma fresco y veraniego. Perfecta para el calor y los planes al aire libre."
   }
 ];
 
@@ -407,7 +561,7 @@ if ("IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0 }
   );
   elementosRevelar.forEach((elemento) => revelar.observe(elemento));
 
