@@ -2,6 +2,48 @@ const NUMERO_WHATSAPP = "50578612261";
 
 const productos = [
   {
+    nombre: "Rome Melancholia",
+    marca: "Mast Perfumes",
+    precio: 55,
+    imagen: "Perfumes/RomeMelancholia.png",
+    descripcion: "Una fragancia aromática y amaderada con lavanda, apio, cardamomo, nuez moscada, bergamota y piña. Fresca y especiada, para el día o la noche."
+  },
+  {
+    nombre: "Yara",
+    marca: "Lattafa",
+    precio: 40,
+    imagen: "Perfumes/Yara.png",
+    descripcion: "Un aroma dulce y cremoso con vainilla, frutas tropicales, almizcle y flores. Suave y femenino, ideal para quienes disfrutan de fragancias golosas."
+  },
+  {
+    nombre: "Yara Candy",
+    marca: "Lattafa",
+    precio: 35,
+    imagen: "Perfumes/YaraCandy.png",
+    descripcion: "Una versión frutal y dulce de Yara, con caramelo efervescente, vainilla, grosella negra, mandarina verde, gardenia y almizcle."
+  },
+  {
+    nombre: "Yara Tous",
+    marca: "Lattafa",
+    precio: 38,
+    imagen: "Perfumes/YaraTous.png",
+    descripcion: "Una fragancia tropical y floral con mango, coco, jazmín, vainilla, fruta de la pasión y azahar. Alegre y dulce para el día a día."
+  },
+  {
+    nombre: "Qimmah for Women",
+    marca: "Lattafa",
+    precio: 35,
+    imagen: "Perfumes/QimmahForWomen.png",
+    descripcion: "Una fragancia floral y cálida con jazmín, tuberosa, vainilla, almendra, haba tonka y cacao. Dulce y envolvente."
+  },
+  {
+    nombre: "Rafan Pour Homme",
+    marca: "Rasasi",
+    precio: 50,
+    imagen: "Perfumes/RafanPourHomme.png",
+    descripcion: "Un aroma marino y amaderado con sal marina, jengibre, algas, vetiver, cedro y musgo de roble. Fresco y acuático para climas cálidos."
+  },
+  {
     nombre: "9 AM Dive",
     marca: "Afnan",
     precio: 40,
