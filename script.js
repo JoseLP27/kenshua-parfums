@@ -1,10 +1,10 @@
-﻿const NUMERO_WHATSAPP = "50578612261";
+const NUMERO_WHATSAPP = "50578612261";
 
 const productos = [
   {
     nombre: "9 AM Dive",
     marca: "Afnan",
-    precio: 45,
+    precio: 40,
     imagen: "Perfumes/9AMDiveAfnan.jpeg",
     descripcion: "Una fragancia fresca y limpia para el día a día. Se siente cítrica y acuática, con un carácter ligero que va bien con el clima cálido y los planes informales."
   },
@@ -25,14 +25,14 @@ const productos = [
   {
     nombre: "9 PM Night Out",
     marca: "Afnan",
-    precio: 48,
+    precio: 60,
     imagen: "Perfumes/9PMNightOut.jpeg",
     descripcion: "Otro lado de la línea 9 PM, con un aire más nocturno. Combina la dulzura característica con un toque de especias y se siente festivo. Pensado para salir de noche."
   },
   {
     nombre: "Yum Yum",
     marca: "Armaf",
-    precio: 42,
+    precio: 60,
     imagen: "Perfumes/ArmarfYumYum.jpeg",
     descripcion: "Un gourmand juguetón y dulce, con aire de postre. Se siente goloso y alegre, ideal para quienes prefieren aromas que huelen rico y quieren algo distinto al clásico de oficina."
   },
@@ -46,91 +46,91 @@ const productos = [
   {
     nombre: "Asad Bourbon",
     marca: "Lattafa",
-    precio: 52,
+    precio: 45,
     imagen: "Perfumes/AssadBourbon.jpeg",
     descripcion: "Un aroma cálido con un guiño de licor y algo de dulzura suave. Es más sobrio que el resto de la línea y cae bien en climas fríos y noches de plan tranquilo."
   },
   {
     nombre: "Asad",
     marca: "Lattafa",
-    precio: 45,
+    precio: 40,
     imagen: "Perfumes/AssadLattfa.jpeg",
     descripcion: "Uno de los perfumes con más seguidores de Lattafa. Mezcla especias y vainilla en un aroma masculino, cálido y versátil, que funciona tanto de día como de noche."
   },
   {
     nombre: "Club de Nuit Iconic",
     marca: "Armaf",
-    precio: 55,
+    precio: 50,
     imagen: "Perfumes/ClubdeNuitIcolnic.jpeg",
     descripcion: "Una fragancia fresca y cítrica, de esas que se sienten limpias y azules. Es muy versátil: acomoda bien en el trabajo y en salidas informales, sin complicaciones."
   },
   {
     nombre: "Club de Nuit Intense Man",
     marca: "Armaf",
-    precio: 48,
+    precio: 45,
     imagen: "Perfumes/ClubdeNuitIntenseMan.jpeg",
     descripcion: "Un clásico entre quienes buscan un perfume con carácter. Tiene una salida cítrica con un toque ahumado y se siente marcado y masculino. Muy popular para ocasiones en las que se quiere destacar."
   },
   {
     nombre: "Club de Nuit Urban Man Elixir",
     marca: "Armaf",
-    precio: 52,
+    precio: 50,
     imagen: "Perfumes/ClubdeNuitUrbanManElixir.jpeg",
     descripcion: "Una versión más moderna y limpia de la línea Club de Nuit. Es fresca, aromática y equilibrada, con un carácter urbano. Buena opción diaria que no se siente pesada."
   },
   {
     nombre: "Hawas Ice",
     marca: "Rasasi",
-    precio: 60,
+    precio: 55,
     imagen: "Perfumes/HawasIce.jpeg",
     descripcion: "La versión más fresca de la familia Hawas. Tiene un aire acuático que se siente limpio y liviano, ideal para el calor y los looks deportivos."
   },
   {
     nombre: "Hawas Tropical",
     marca: "Rasasi",
-    precio: 60,
+    precio: 50,
     imagen: "Perfumes/HawasTropical.jpeg",
     descripcion: "Una fragancia frutal y dulce con espíritu veraniego. Se siente jugosa y tropical, perfecta para climas cálidos y para quienes disfrutan de aromas alegres."
   },
   {
     nombre: "Khamrah Dukan",
     marca: "Lattafa",
-    precio: 55,
+    precio: 45,
     imagen: "Perfumes/KhamrahDukan.jpeg",
     descripcion: "Una variante de Khamrah con más resina y especias. Se siente cálida, con la dulzura de la línea y un fondo un poco ahumado. Para quienes quieren lo goloso con más cuerpo."
   },
   {
     nombre: "Khamrah",
     marca: "Lattafa",
-    precio: 50,
+    precio: 45,
     imagen: "Perfumes/KhamrahLattfa.jpeg",
     descripcion: "Un gourmand dulce y especiado que se ha vuelto muy popular. Huele a canela, vainilla y dátiles, con un aire cálido y confortable. Ideal para climas fríos y reuniones de noche."
   },
   {
     nombre: "Khamrah Qahwa",
     marca: "Lattafa",
-    precio: 55,
+    precio: 45,
     imagen: "Perfumes/KhamrahQahwa.jpeg",
     descripcion: "La versión de Khamrah con un giro de café. Mantiene la dulzura y las especias, pero se nota más tostado y cálido. Para quienes prefieren el dulce con un punto más seco."
   },
   {
     nombre: "Khamrah Waha",
     marca: "Lattafa",
-    precio: 52,
+    precio: 60,
     imagen: "Perfumes/KhamrahWaha.jpeg",
     descripcion: "Una versión más suave y redonda de Khamrah. Se siente cálida y menos especiada, fácil de llevar en el día a día de clima templado o frío."
   },
   {
     nombre: "Odyssey Homme",
     marca: "Armaf",
-    precio: 45,
+    precio: 40,
     imagen: "Perfumes/OdysseyHomme.jpeg",
     descripcion: "Un aroma elegante, empolvado y con un toque dulce. Es sobrio y se siente pulido, buena opción para el trabajo o para eventos formales."
   },
   {
     nombre: "Odyssey Mandarin Sky",
     marca: "Armaf",
-    precio: 48,
+    precio: 40,
     imagen: "Perfumes/OdysseyMandarinSky.jpeg",
     descripcion: "Un cítrico dulce con aire de caramelo. La mandarina se nota desde el inicio y el conjunto queda goloso y alegre. Para quienes buscan un aroma frutal fácil de usar."
   },
@@ -144,7 +144,7 @@ const productos = [
   {
     nombre: "Club de Nuit Lionheart Man",
     marca: "Armaf",
-    precio: 55,
+    precio: 50,
     imagen: "Perfumes/ClubdeNuitLionheartMan.jpeg",
     descripcion: "Un aroma cálido y especiado con un toque dulce. Combina menta y lavanda en la salida con un fondo de vainilla, benjuí, miel, haba tonka y tabaco. Masculino y envolvente, pensado para climas fríos y noches especiales."
   },
@@ -165,21 +165,21 @@ const productos = [
   {
     nombre: "9 AM Pour Femme",
     marca: "Afnan",
-    precio: 45,
+    precio: 40,
     imagen: "Perfumes/9AMPourFemme.jpeg",
     descripcion: "Una fragancia femenina fresca y frutal. Abre con toronja y bergamota, sigue con frambuesa y grosellas negras, y cierra con almizcle y naranja. Ligera y fácil de llevar para el día a día."
   },
   {
     nombre: "Club de Nuit Woman",
     marca: "Armaf",
-    precio: 50,
+    precio: 40,
     imagen: "Perfumes/ClubdeNuitWoman.jpeg",
     descripcion: "Un aroma floral y frutal con carácter elegante. Combina naranja, toronja, durazno, rosa, jazmín y lichi sobre una base de vainilla, almizcle y vetiver. Versátil y femenino, para el trabajo o una salida."
   },
   {
     nombre: "Club de Nuit Maleka",
     marca: "Armaf",
-    precio: 55,
+    precio: 60,
     imagen: "Perfumes/ClubdeNuitMaleka.jpeg",
     descripcion: "Una fragancia dulce y envolvente con un toque gourmand. La bergamota y el lichi dan paso a un corazón de raíz de lirio y un fondo de praliné, sándalo y ambroxan. Sofisticada y cálida, para ocasiones especiales."
   },
@@ -193,7 +193,7 @@ const productos = [
   {
     nombre: "9 PM Pour Femme",
     marca: "Afnan",
-    precio: 45,
+    precio: 40,
     imagen: "Perfumes/9PMPourFemme.jpeg",
     descripcion: "Una fragancia femenina floral y frutal con un fondo atalcado. La frambuesa y el ciprés se mezclan con rosa, violeta, pino y cedro. Dulce y versátil, funciona bien de día o de noche."
   },
@@ -207,28 +207,28 @@ const productos = [
   {
     nombre: "Odyssey Marshmallow",
     marca: "Armaf",
-    precio: 50,
+    precio: 40,
     imagen: "Perfumes/OdysseyMarshmallow.jpeg",
     descripcion: "Una fragancia gourmand cremosa y frutal. Abre con coco, manzana y limón, sigue con malvavisco, fresa, durazno y frambuesa, y cierra con queso mascarpone, praliné, vainilla y ámbar. Dulce y juvenil, ideal para el día."
   },
   {
     nombre: "Odyssey Mega Man",
     marca: "Armaf",
-    precio: 48,
+    precio: 40,
     imagen: "Perfumes/OdysseyMegaMan.jpeg",
     descripcion: "Un perfume cítrico, aromático y fresco con un fondo amaderado. Limón, jengibre, bergamota, piña, naranja y menta le dan energía, mientras el ámbar y las maderas lo redondean. Muy versátil para el día a día."
   },
   {
     nombre: "Odyssey Aqua Edition",
     marca: "Armaf",
-    precio: 48,
+    precio: 45,
     imagen: "Perfumes/OdysseyAquaEdition.jpeg",
     descripcion: "Una fragancia fresca y acuática con carácter aromático. Menta, naranja, toronja, lavanda, ciprés y ambroxan se combinan en un aroma limpio y moderno. Ideal para el calor y el uso diario."
   },
   {
     nombre: "Odyssey Limoni Fresh",
     marca: "Armaf",
-    precio: 48,
+    precio: 45,
     imagen: "Perfumes/OdysseyLimoniFresh.jpeg",
     descripcion: "Un cítrico fresco y luminoso con un toque verde. Limón, té, naranja, bergamota, mandarina y azahar crean una sensación limpia y vibrante. Perfecto para el día, especialmente en clima cálido."
   },
@@ -270,21 +270,21 @@ const productos = [
   {
     nombre: "Odyssey Toffee Coffee",
     marca: "Armaf",
-    precio: 50,
+    precio: 45,
     imagen: "Perfumes/OdysseyToffeeCoffee.jpeg",
     descripcion: "Un gourmand dulce y cálido con aroma a café y caramelo. Café, toffee, azúcar, vainilla y lactonas se combinan en un perfume cremoso y adictivo. Ideal para el clima frío y las salidas nocturnas."
   },
   {
     nombre: "Odyssey Mandarin Sky Elixir",
     marca: "Armaf",
-    precio: 52,
+    precio: 45,
     imagen: "Perfumes/OdysseyMandarinSkyElixir.jpeg",
     descripcion: "Una versión más intensa de Mandarin Sky. Mandarina, caramelo, vainilla, naranja, haba tonka y lavanda crean un aroma cítrico, dulce y cálido. Con buena estela, para quienes buscan destacar."
   },
   {
     nombre: "Odyssey Bahamas",
     marca: "Armaf",
-    precio: 48,
+    precio: 50,
     imagen: "Perfumes/OdysseyBahamas.jpeg",
     descripcion: "Una fragancia marina y acuática con un toque afrutado y salado. Agua de mar, melón, cantalupo y pera se combinan en un aroma fresco y veraniego. Perfecta para el calor y los planes al aire libre."
   }
