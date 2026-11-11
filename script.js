@@ -53,7 +53,7 @@ const productos = [
   {
     nombre: "9 PM",
     marca: "Afnan",
-    precio: 45,
+    precio: 40,
     imagen: "Perfumes/9PM.jpeg",
     descripcion: "Un perfume dulce con aire goloso, pensado para salidas de noche. Tiene calidez y un toque festivo que lo hace cómodo de llevar en eventos y reuniones."
   },
