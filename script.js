@@ -332,6 +332,105 @@ const productos = [
   }
 ];
 
+/* ---------- Productos Varios ----------
+   - precio: en Córdobas (C$). Usa null para mostrar "Precio a consultar".
+   - categorias: la primera es la principal; un producto puede aparecer en varias.
+   - imagenes: si hay más de una, la tarjeta muestra un carrusel.
+   - variantes: botones de color; cada variante tiene sus propias imágenes.
+   Las categorías válidas están en CATEGORIAS_VARIOS (orden de los filtros). */
+
+const CATEGORIAS_VARIOS = [
+  "Cuidado personal",
+  "Artículos electrónicos",
+  "Ropa",
+  "Juguetes",
+  "Muebles / Hogar"
+];
+
+const RUTA_VARIOS = "assets/productos-varios/";
+
+// Precio del perchero separado para editarlo fácilmente.
+const PRECIO_PERCHERO = 400;
+
+const productosVarios = [
+  {
+    id: "galaxy-buds-9-pro",
+    nombre: "Samsung Galaxy Buds 9 Pro",
+    categorias: ["Artículos electrónicos"],
+    precio: 450,
+    descripcion: "Audífonos inalámbricos con estuche de carga, diseño compacto y cómodo para el día a día. Disponibles en blanco, negro y morado.",
+    variantes: [
+      { nombre: "Blanco", color: "#F2F2F2", imagenes: [RUTA_VARIOS + "electronica/galaxy-buds-9-pro-blanco.jpeg"] },
+      { nombre: "Negro", color: "#1A1A1A", imagenes: [RUTA_VARIOS + "electronica/galaxy-buds-9-pro-negro.jpeg"] },
+      { nombre: "Morado", color: "#8E6CC9", imagenes: [RUTA_VARIOS + "electronica/galaxy-buds-9-pro-morado.jpeg"] }
+    ]
+  },
+  {
+    id: "secadora-3-en-1",
+    nombre: "Secadora 3 en 1",
+    categorias: ["Artículos electrónicos", "Cuidado personal"],
+    precio: 1350,
+    descripcion: "Set de cuidado del cabello 3 en 1: secadora profesional, cepillo alisador y plancha alisadora. Ideal para secar, dar volumen y alisar desde casa.",
+    imagenes: [
+      RUTA_VARIOS + "electronica/secadora-3-en-1-1.jpeg",
+      RUTA_VARIOS + "electronica/secadora-3-en-1-2.jpeg",
+      RUTA_VARIOS + "electronica/secadora-3-en-1-3.jpeg",
+      RUTA_VARIOS + "electronica/secadora-3-en-1-4.jpeg"
+    ]
+  },
+  {
+    id: "perchero-triangular",
+    nombre: "Perchero triangular",
+    categorias: ["Muebles / Hogar"],
+    precio: PRECIO_PERCHERO,
+    descripcion: "Perchero triangular con ruedas, de plástico resistente. Barra superior para colgar ropa, 2 repisas inferiores para zapatos o cajas y 4 ruedas giratorias (2 con freno). Medidas aprox.: 150 × 64 × 43 cm.",
+    imagenes: [
+      RUTA_VARIOS + "hogar/perchero-triangular-1.jpeg",
+      RUTA_VARIOS + "hogar/perchero-triangular-2.jpeg",
+      RUTA_VARIOS + "hogar/perchero-triangular-3.jpeg",
+      RUTA_VARIOS + "hogar/perchero-triangular-4.jpeg"
+    ]
+  },
+  {
+    id: "carrito-juegos-medicos",
+    nombre: "Carrito de juegos médicos",
+    categorias: ["Juguetes"],
+    precio: 1250,
+    descripcion: "Carrito médico de juego de rol de doble cara con luces y sonido. Incluye 82 piezas para jugar al doctor y fomentar la imaginación.",
+    imagenes: [RUTA_VARIOS + "juguetes/carrito-juegos-medicos.jpeg"]
+  },
+  {
+    id: "carrito-comida-rapida",
+    nombre: "Carrito de comida rápida",
+    categorias: ["Juguetes"],
+    precio: 1250,
+    descripcion: "Carrito de comida rápida de juego de rol de doble cara, con luces y sonido. Viene en dos versiones: rojo (90 piezas) y morado (99 piezas).",
+    variantes: [
+      { nombre: "Rojo", color: "#C8282E", imagenes: [RUTA_VARIOS + "juguetes/carrito-comida-rapida-rojo.jpeg"] },
+      { nombre: "Morado", color: "#9B4FB5", imagenes: [RUTA_VARIOS + "juguetes/carrito-comida-rapida-morado.jpeg"] }
+    ]
+  },
+  {
+    id: "chaqueta-cuero-roja",
+    nombre: "Chaqueta de cuero roja",
+    categorias: ["Ropa"],
+    precio: 2400,
+    descripcion: "Chaqueta corta estilo motociclista de cuero rojo con detalles en crema, parches y cierre frontal.",
+    imagenes: [
+      RUTA_VARIOS + "ropa/chaqueta-cuero-roja-1.jpeg",
+      RUTA_VARIOS + "ropa/chaqueta-cuero-roja-2.jpeg"
+    ]
+  },
+  {
+    id: "chaqueta-cuero-negra",
+    nombre: "Chaqueta de cuero negra",
+    categorias: ["Ropa"],
+    precio: 2400,
+    descripcion: "Chaqueta corta estilo motociclista de cuero negro con detalles en crema, parches y cierre frontal.",
+    imagenes: [RUTA_VARIOS + "ropa/chaqueta-cuero-negra.jpeg"]
+  }
+];
+
 function formatearPrecio(precio) {
   return "$" + precio.toFixed(2);
 }
@@ -348,7 +447,7 @@ function iniciales(texto) {
   return letras.slice(0, 2).join("").toUpperCase();
 }
 
-function marcadorImagen(texto) {
+function marcadorImagen(texto, subtitulo) {
   const fondo = "#0A111E";
   const oro = "#D4AF37";
   const inicial = iniciales(texto);
@@ -356,7 +455,7 @@ function marcadorImagen(texto) {
     "<svg xmlns='http://www.w3.org/2000/svg' width='600' height='450'>" +
     "<rect width='100%' height='100%' fill='" + fondo + "'/>" +
     "<text x='50%' y='46%' font-family='Georgia, serif' font-size='72' fill='" + oro + "' opacity='0.3' text-anchor='middle' dominant-baseline='middle'>" + inicial + "</text>" +
-    "<text x='50%' y='62%' font-family='Georgia, serif' font-size='22' fill='" + oro + "' opacity='0.5' text-anchor='middle' dominant-baseline='middle'>PERFUME</text>" +
+    "<text x='50%' y='62%' font-family='Georgia, serif' font-size='22' fill='" + oro + "' opacity='0.5' text-anchor='middle' dominant-baseline='middle'>" + (subtitulo || "PERFUME") + "</text>" +
     "</svg>";
   return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
 }
@@ -364,6 +463,10 @@ function marcadorImagen(texto) {
 function reemplazarImagen(img) {
   img.onerror = null;
   const alt = img.alt || "";
+  if (img.dataset.tipo === "vario") {
+    img.src = marcadorImagen(alt || "KP", "KENSHUA");
+    return;
+  }
   const marca = alt.includes(" de ") ? alt.split(" de ").pop() : alt;
   img.src = marcadorImagen(marca || "KP");
 }
@@ -426,8 +529,495 @@ function renderizarProductos(lista) {
   contenedor.appendChild(fragmento);
 }
 
+/* ---------- Productos Varios: tarjetas con galería ---------- */
+
+const contenedorVarios = document.getElementById("productos-varios");
+
+const ICONO_WHATSAPP = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+
+const FLECHA_IZQ = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+const FLECHA_DER = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+
+function formatearCordobas(precio) {
+  if (typeof precio !== "number") {
+    return "Precio a consultar";
+  }
+  return "C$ " + precio.toLocaleString("en-US");
+}
+
+function tieneVariantes(producto) {
+  return Array.isArray(producto.variantes) && producto.variantes.length > 0;
+}
+
+function imagenesDe(producto, indiceVariante) {
+  if (tieneVariantes(producto)) {
+    return producto.variantes[indiceVariante].imagenes;
+  }
+  return producto.imagenes || [];
+}
+
+function mensajeVario(producto, indiceVariante) {
+  let mensaje = "Hola, me interesa el producto " + producto.nombre;
+  if (tieneVariantes(producto)) {
+    mensaje += " (color " + producto.variantes[indiceVariante].nombre + ")";
+  }
+  return mensaje;
+}
+
+function montarGaleria(galeria, imagenes, alt) {
+  const total = imagenes.length;
+  const altSeguro = escaparHTML(alt);
+
+  const slides = imagenes
+    .map(
+      (src, i) =>
+        '<div class="galeria-slide">' +
+        '<img src="' + src + '" alt="' + altSeguro + (total > 1 ? " — foto " + (i + 1) + " de " + total : "") +
+        '" data-tipo="vario" loading="lazy" decoding="async" onerror="reemplazarImagen(this)">' +
+        "</div>"
+    )
+    .join("");
+
+  let controles = "";
+  if (total > 1) {
+    const puntos = imagenes
+      .map((_, i) => '<span class="galeria-punto' + (i === 0 ? " activo" : "") + '"></span>')
+      .join("");
+    controles =
+      '<button class="galeria-flecha galeria-prev" type="button" aria-label="Foto anterior">' + FLECHA_IZQ + "</button>" +
+      '<button class="galeria-flecha galeria-next" type="button" aria-label="Foto siguiente">' + FLECHA_DER + "</button>" +
+      '<div class="galeria-puntos" aria-hidden="true">' + puntos + "</div>";
+  }
+
+  galeria.classList.toggle("galeria-multiple", total > 1);
+  galeria.innerHTML =
+    '<div class="galeria-pista"' + (total > 1 ? ' tabindex="0" aria-label="Fotos de ' + altSeguro + '"' : "") + ">" +
+    slides +
+    "</div>" +
+    controles;
+
+  const pista = galeria.querySelector(".galeria-pista");
+  galeria.indiceActual = 0;
+
+  if (total <= 1) {
+    return;
+  }
+
+  const puntos = galeria.querySelectorAll(".galeria-punto");
+
+  function irA(indice) {
+    const destino = (indice + total) % total;
+    pista.scrollTo({ left: destino * pista.clientWidth, behavior: "smooth" });
+  }
+
+  let pendiente = false;
+  pista.addEventListener(
+    "scroll",
+    () => {
+      if (pendiente) return;
+      pendiente = true;
+      requestAnimationFrame(() => {
+        pendiente = false;
+        const indice = Math.round(pista.scrollLeft / Math.max(pista.clientWidth, 1));
+        if (indice !== galeria.indiceActual) {
+          galeria.indiceActual = indice;
+          puntos.forEach((p, i) => p.classList.toggle("activo", i === indice));
+        }
+      });
+    },
+    { passive: true }
+  );
+
+  galeria.querySelector(".galeria-prev").addEventListener("click", (evento) => {
+    evento.stopPropagation();
+    irA(galeria.indiceActual - 1);
+  });
+
+  galeria.querySelector(".galeria-next").addEventListener("click", (evento) => {
+    evento.stopPropagation();
+    irA(galeria.indiceActual + 1);
+  });
+
+  pista.addEventListener("keydown", (evento) => {
+    if (evento.key === "ArrowLeft") {
+      evento.preventDefault();
+      irA(galeria.indiceActual - 1);
+    } else if (evento.key === "ArrowRight") {
+      evento.preventDefault();
+      irA(galeria.indiceActual + 1);
+    }
+  });
+}
+
+function crearTarjetaVaria(producto) {
+  const tarjeta = document.createElement("article");
+  tarjeta.classList.add("producto", "producto-vario");
+
+  let varianteActual = 0;
+  const nombre = escaparHTML(producto.nombre);
+  const categoria = escaparHTML(producto.categorias.join(" · "));
+
+  let htmlColores = "";
+  if (tieneVariantes(producto)) {
+    const botones = producto.variantes
+      .map(
+        (variante, i) =>
+          '<button class="color-btn' + (i === 0 ? " activo" : "") + '" type="button" role="radio"' +
+          ' aria-checked="' + (i === 0 ? "true" : "false") + '"' +
+          ' aria-label="Color ' + escaparHTML(variante.nombre) + '" title="' + escaparHTML(variante.nombre) + '"' +
+          ' data-indice="' + i + '" style="--color-muestra:' + variante.color + '"></button>'
+      )
+      .join("");
+    htmlColores =
+      '<div class="colores">' +
+      '<div class="colores-botones" role="radiogroup" aria-label="Color">' + botones + "</div>" +
+      '<span class="color-nombre">' + escaparHTML(producto.variantes[0].nombre) + "</span>" +
+      "</div>";
+  }
+
+  tarjeta.innerHTML = `
+    <div class="producto-imagen galeria"></div>
+    <div class="producto-info">
+      <span class="producto-casa">${categoria}</span>
+      <h3 class="producto-nombre">${nombre}</h3>
+      <p class="producto-precio">${formatearCordobas(producto.precio)}</p>
+      ${htmlColores}
+      <button class="btn-ver" type="button">Ver descripción</button>
+      <a class="btn-whatsapp" href="${enlaceWhatsApp(mensajeVario(producto, 0))}" target="_blank" rel="noopener">
+        ${ICONO_WHATSAPP}
+        Pedir por WhatsApp
+      </a>
+    </div>
+  `;
+
+  const galeria = tarjeta.querySelector(".galeria");
+  const enlacePedido = tarjeta.querySelector(".btn-whatsapp");
+  montarGaleria(galeria, imagenesDe(producto, 0), producto.nombre);
+
+  tarjeta.querySelectorAll(".color-btn").forEach((boton) => {
+    boton.addEventListener("click", (evento) => {
+      evento.stopPropagation();
+      const indice = Number(boton.dataset.indice);
+      if (indice === varianteActual) return;
+      varianteActual = indice;
+
+      tarjeta.querySelectorAll(".color-btn").forEach((b) => {
+        const activo = b === boton;
+        b.classList.toggle("activo", activo);
+        b.setAttribute("aria-checked", activo ? "true" : "false");
+      });
+      const variante = producto.variantes[indice];
+      tarjeta.querySelector(".color-nombre").textContent = variante.nombre;
+      montarGaleria(galeria, variante.imagenes, producto.nombre + " " + variante.nombre);
+      enlacePedido.href = enlaceWhatsApp(mensajeVario(producto, indice));
+    });
+  });
+
+  tarjeta.addEventListener("click", (evento) => {
+    if (evento.target.closest(".btn-whatsapp, .galeria-flecha, .color-btn")) {
+      return;
+    }
+    const imagenes = imagenesDe(producto, varianteActual);
+    const variante = tieneVariantes(producto) ? producto.variantes[varianteActual] : null;
+    mostrarModal({
+      imagen: imagenes[galeria.indiceActual || 0] || imagenes[0],
+      alt: producto.nombre,
+      tipo: "vario",
+      etiqueta: producto.categorias.join(" · "),
+      nombre: producto.nombre + (variante ? " — " + variante.nombre : ""),
+      precio: formatearCordobas(producto.precio),
+      descripcion: producto.descripcion,
+      mensaje: mensajeVario(producto, varianteActual)
+    });
+  });
+
+  return tarjeta;
+}
+
+function renderizarVarios(lista) {
+  contenedorVarios.innerHTML = "";
+  const fragmento = document.createDocumentFragment();
+  lista.forEach((producto) => fragmento.appendChild(crearTarjetaVaria(producto)));
+  contenedorVarios.appendChild(fragmento);
+}
+
+/* ---------- Buscador y filtros ---------- */
+
+const buscador = document.getElementById("buscador-perfumes");
+const botonLimpiar = document.getElementById("limpiar-busqueda");
+
+const PLACEHOLDERS = {
+  perfumes: "Buscar por nombre o marca...",
+  otros: "Buscar por nombre o categoría..."
+};
+
+const filtros = {
+  perfumes: { texto: "", marca: null, letra: null },
+  otros: { texto: "", categoria: null, letra: null }
+};
+
+let pestanaActiva = "perfumes";
+
+function normalizar(texto) {
+  return String(texto)
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase();
+}
+
+function letraInicial(nombre) {
+  const letra = normalizar(nombre.trim()).charAt(0).toUpperCase();
+  return /[A-Z]/.test(letra) ? letra : "#";
+}
+
+function compararNombres(a, b) {
+  return a.nombre.localeCompare(b.nombre, "es", { sensitivity: "base", numeric: true });
+}
+
+function mezclar(lista) {
+  const copia = lista.slice();
+  for (let i = copia.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copia[i], copia[j]] = [copia[j], copia[i]];
+  }
+  return copia;
+}
+
+// Orden "revuelto" fijo durante la visita, para que no salte al filtrar.
+const variosMezclados = mezclar(productosVarios);
+
+function crearBotonFiltro(clase, etiqueta, valor, cantidad) {
+  const boton = document.createElement("button");
+  boton.type = "button";
+  boton.className = clase;
+  boton.dataset.valor = valor === null ? "" : valor;
+  boton.setAttribute("aria-pressed", "false");
+  boton.innerHTML =
+    escaparHTML(etiqueta) +
+    (typeof cantidad === "number" ? ' <span class="chip-cantidad">' + cantidad + "</span>" : "");
+  return boton;
+}
+
+function construirChips(contenedorChips, opciones, alElegir) {
+  contenedorChips.innerHTML = "";
+  contenedorChips.appendChild(crearBotonFiltro("chip", "Todas", null));
+  opciones.forEach((opcion) => {
+    const boton = crearBotonFiltro("chip", opcion.etiqueta, opcion.valor, opcion.cantidad);
+    if (opcion.cantidad === 0) {
+      boton.disabled = true;
+    }
+    contenedorChips.appendChild(boton);
+  });
+  contenedorChips.addEventListener("click", (evento) => {
+    const boton = evento.target.closest("button");
+    if (!boton || boton.disabled) return;
+    alElegir(boton.dataset.valor || null);
+  });
+}
+
+function construirLetras(contenedorLetras, nombres, alElegir) {
+  const disponibles = new Set(nombres.map(letraInicial));
+  const letras = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+  if (disponibles.has("#")) {
+    letras.unshift("#");
+  }
+  contenedorLetras.innerHTML = "";
+  contenedorLetras.appendChild(crearBotonFiltro("letra letra-todas", "Todas", null));
+  letras.forEach((letra) => {
+    const boton = crearBotonFiltro("letra", letra, letra);
+    boton.setAttribute("aria-label", letra === "#" ? "Empiezan con número" : "Letra " + letra);
+    if (!disponibles.has(letra)) {
+      boton.disabled = true;
+    }
+    contenedorLetras.appendChild(boton);
+  });
+  contenedorLetras.addEventListener("click", (evento) => {
+    const boton = evento.target.closest("button");
+    if (!boton || boton.disabled) return;
+    alElegir(boton.dataset.valor || null);
+  });
+}
+
+function marcarActivo(contenedorBotones, valor) {
+  contenedorBotones.querySelectorAll("button").forEach((boton) => {
+    const activo = (boton.dataset.valor || null) === valor;
+    boton.classList.toggle("activo", activo);
+    boton.setAttribute("aria-pressed", activo ? "true" : "false");
+  });
+}
+
+function mensajeSinResultados(texto, tipo) {
+  if (texto) {
+    return (
+      "<p class='sin-resultados'>No se encontraron " + tipo + " que coincidan con " +
+      "<span class='sr-term'>'" + escaparHTML(texto) + "'</span>.</p>"
+    );
+  }
+  return "<p class='sin-resultados'>No hay " + tipo + " con los filtros seleccionados.</p>";
+}
+
+/* Perfumes: texto + marca + letra inicial */
+
+const chipsMarca = document.getElementById("chips-marca");
+const letrasPerfumes = document.getElementById("letras-perfumes");
+const resumenPerfumes = document.getElementById("resumen-perfumes");
+const limpiarPerfumes = document.getElementById("limpiar-perfumes");
+
+function aplicarFiltrosPerfumes() {
+  const estado = filtros.perfumes;
+  const termino = normalizar(estado.texto);
+
+  let lista = productos.filter(
+    (producto) =>
+      (!estado.marca || producto.marca === estado.marca) &&
+      (!estado.letra || letraInicial(producto.nombre) === estado.letra) &&
+      (!termino ||
+        normalizar(producto.nombre).includes(termino) ||
+        normalizar(producto.marca).includes(termino))
+  );
+
+  if (estado.letra) {
+    lista = lista.slice().sort(compararNombres);
+  }
+
+  marcarActivo(chipsMarca, estado.marca);
+  marcarActivo(letrasPerfumes, estado.letra);
+  limpiarPerfumes.classList.toggle("visible", Boolean(estado.marca || estado.letra || estado.texto));
+  resumenPerfumes.textContent = "Mostrando " + lista.length + " de " + productos.length + " perfumes";
+
+  if (lista.length === 0) {
+    contenedor.innerHTML = mensajeSinResultados(estado.texto, "perfumes");
+  } else {
+    renderizarProductos(lista);
+  }
+}
+
+/* Productos Varios: texto + categoría + letra inicial */
+
+const chipsCategoria = document.getElementById("chips-categoria");
+const letrasOtros = document.getElementById("letras-otros");
+const resumenOtros = document.getElementById("resumen-otros");
+const limpiarOtros = document.getElementById("limpiar-otros");
+
+function textoBuscableVario(producto) {
+  const colores = tieneVariantes(producto) ? producto.variantes.map((v) => v.nombre).join(" ") : "";
+  return normalizar(producto.nombre + " " + producto.categorias.join(" ") + " " + colores);
+}
+
+function aplicarFiltrosVarios() {
+  const estado = filtros.otros;
+  const termino = normalizar(estado.texto);
+
+  let lista = variosMezclados.filter(
+    (producto) =>
+      (!estado.categoria || producto.categorias.includes(estado.categoria)) &&
+      (!estado.letra || letraInicial(producto.nombre) === estado.letra) &&
+      (!termino || textoBuscableVario(producto).includes(termino))
+  );
+
+  if (estado.letra) {
+    lista = lista.slice().sort(compararNombres);
+  }
+
+  marcarActivo(chipsCategoria, estado.categoria);
+  marcarActivo(letrasOtros, estado.letra);
+  limpiarOtros.classList.toggle("visible", Boolean(estado.categoria || estado.letra || estado.texto));
+  resumenOtros.textContent = "Mostrando " + lista.length + " de " + productosVarios.length + " productos";
+
+  if (lista.length === 0) {
+    contenedorVarios.innerHTML = mensajeSinResultados(estado.texto, "productos");
+  } else {
+    renderizarVarios(lista);
+  }
+}
+
+function aplicarFiltros(pestana) {
+  if (pestana === "otros") {
+    aplicarFiltrosVarios();
+  } else {
+    aplicarFiltrosPerfumes();
+  }
+}
+
+function iniciarFiltros() {
+  const marcas = Array.from(new Set(productos.map((p) => p.marca))).sort((a, b) =>
+    a.localeCompare(b, "es", { sensitivity: "base" })
+  );
+  construirChips(
+    chipsMarca,
+    marcas.map((marca) => ({
+      valor: marca,
+      etiqueta: marca,
+      cantidad: productos.filter((p) => p.marca === marca).length
+    })),
+    (valor) => {
+      filtros.perfumes.marca = valor;
+      aplicarFiltrosPerfumes();
+    }
+  );
+  construirLetras(letrasPerfumes, productos.map((p) => p.nombre), (valor) => {
+    filtros.perfumes.letra = filtros.perfumes.letra === valor ? null : valor;
+    aplicarFiltrosPerfumes();
+  });
+
+  construirChips(
+    chipsCategoria,
+    CATEGORIAS_VARIOS.map((categoria) => ({
+      valor: categoria,
+      etiqueta: categoria,
+      cantidad: productosVarios.filter((p) => p.categorias.includes(categoria)).length
+    })),
+    (valor) => {
+      filtros.otros.categoria = valor;
+      aplicarFiltrosVarios();
+    }
+  );
+  construirLetras(letrasOtros, productosVarios.map((p) => p.nombre), (valor) => {
+    filtros.otros.letra = filtros.otros.letra === valor ? null : valor;
+    aplicarFiltrosVarios();
+  });
+}
+
+function limpiarFiltros(pestana) {
+  const estado = filtros[pestana];
+  Object.keys(estado).forEach((clave) => {
+    estado[clave] = clave === "texto" ? "" : null;
+  });
+  if (pestana === pestanaActiva) {
+    buscador.value = "";
+    botonLimpiar.classList.remove("visible");
+  }
+  aplicarFiltros(pestana);
+}
+
+limpiarPerfumes.addEventListener("click", () => limpiarFiltros("perfumes"));
+limpiarOtros.addEventListener("click", () => limpiarFiltros("otros"));
+
+buscador.addEventListener("input", () => {
+  const texto = buscador.value.trim();
+  botonLimpiar.classList.toggle("visible", texto.length > 0);
+  filtros[pestanaActiva].texto = texto;
+  aplicarFiltros(pestanaActiva);
+});
+
+botonLimpiar.addEventListener("click", () => {
+  buscador.value = "";
+  botonLimpiar.classList.remove("visible");
+  filtros[pestanaActiva].texto = "";
+  aplicarFiltros(pestanaActiva);
+  buscador.focus();
+});
+
+function cambiarBusquedaDePestana(pestana) {
+  pestanaActiva = pestana;
+  buscador.placeholder = PLACEHOLDERS[pestana] || PLACEHOLDERS.perfumes;
+  buscador.value = filtros[pestana].texto;
+  botonLimpiar.classList.toggle("visible", buscador.value.length > 0);
+}
+
 try {
-  renderizarProductos(productos);
+  iniciarFiltros();
+  aplicarFiltrosPerfumes();
   console.info("[Kenshua] Catálogo cargado: " + productos.length + " productos.");
 } catch (error) {
   console.error("[Kenshua] Error al renderizar el catálogo:", error);
@@ -435,42 +1025,14 @@ try {
     '<p class="sin-js">No fue posible cargar el catálogo. Intenta recargar la página.</p>';
 }
 
-/* ---------- Buscador y filtro ---------- */
-
-const buscador = document.getElementById("buscador-perfumes");
-const botonLimpiar = document.getElementById("limpiar-busqueda");
-
-buscador.addEventListener("input", () => {
-  const texto = buscador.value.trim();
-  botonLimpiar.classList.toggle("visible", texto.length > 0);
-
-  if (texto === "") {
-    renderizarProductos(productos);
-    return;
-  }
-
-  const termino = texto.toLowerCase();
-  const filtrados = productos.filter(
-    (producto) =>
-      producto.nombre.toLowerCase().includes(termino) ||
-      producto.marca.toLowerCase().includes(termino)
-  );
-
-  if (filtrados.length === 0) {
-    contenedor.innerHTML =
-      "<p class='sin-resultados'>No se encontraron perfumes que coincidan con " +
-      "<span class='sr-term'>'" + escaparHTML(texto) + "'</span>.</p>";
-  } else {
-    renderizarProductos(filtrados);
-  }
-});
-
-botonLimpiar.addEventListener("click", () => {
-  buscador.value = "";
-  botonLimpiar.classList.remove("visible");
-  renderizarProductos(productos);
-  buscador.focus();
-});
+try {
+  aplicarFiltrosVarios();
+  console.info("[Kenshua] Productos varios cargados: " + productosVarios.length + " productos.");
+} catch (error) {
+  console.error("[Kenshua] Error al renderizar productos varios:", error);
+  contenedorVarios.innerHTML =
+    '<p class="sin-js">No fue posible cargar los productos. Intenta recargar la página.</p>';
+}
 
 /* ---------- Modal de producto ---------- */
 
@@ -486,15 +1048,32 @@ const modalPedir = document.getElementById("modal-pedir");
 let elementoAnterior = null;
 
 function abrirModal(producto) {
+  mostrarModal({
+    imagen: producto.imagen,
+    alt: producto.nombre + " de " + producto.marca,
+    tipo: "perfume",
+    etiqueta: producto.marca,
+    nombre: producto.nombre,
+    precio: formatearPrecio(producto.precio),
+    descripcion: producto.descripcion,
+    mensaje: "Hola, me interesa el perfume " + producto.nombre
+  });
+}
+
+function mostrarModal(datos) {
   elementoAnterior = document.activeElement;
 
-  modalImagen.src = producto.imagen;
-  modalImagen.alt = producto.nombre + " de " + producto.marca;
-  modalMarca.textContent = producto.marca;
-  modalNombre.textContent = producto.nombre;
-  modalPrecio.textContent = formatearPrecio(producto.precio);
-  modalDescripcion.textContent = producto.descripcion;
-  modalPedir.href = enlaceWhatsApp("Hola, me interesa el perfume " + producto.nombre);
+  modalImagen.onerror = function () {
+    reemplazarImagen(this);
+  };
+  modalImagen.dataset.tipo = datos.tipo;
+  modalImagen.src = datos.imagen;
+  modalImagen.alt = datos.alt;
+  modalMarca.textContent = datos.etiqueta;
+  modalNombre.textContent = datos.nombre;
+  modalPrecio.textContent = datos.precio;
+  modalDescripcion.textContent = datos.descripcion;
+  modalPedir.href = enlaceWhatsApp(datos.mensaje);
 
   modal.classList.add("abierto");
   modal.setAttribute("aria-hidden", "false");
@@ -582,6 +1161,7 @@ botonesTab.forEach((boton) => {
       panel.classList.remove("activo");
     });
     document.getElementById(boton.dataset.tab).classList.add("activo");
+    cambiarBusquedaDePestana(boton.dataset.tab);
   });
 });
 

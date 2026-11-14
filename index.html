@@ -91,8 +91,8 @@
         TikTok o Facebook y coordinamos tu pedido o entrega.
       </p>
       <p class="seccion-texto">
-        Además de los perfumes, estamos preparando una línea de accesorios y productos de
-        cuidado personal que llegará próximamente a la tienda.
+        Además de los perfumes, en la sección de Otros Productos encontrarás artículos
+        electrónicos, cuidado personal, ropa, juguetes y artículos para el hogar.
       </p>
     </section>
 
@@ -106,7 +106,7 @@
           <circle cx="11" cy="11" r="7"></circle>
           <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
         </svg>
-        <input type="text" id="buscador-perfumes" placeholder="Buscar por nombre o marca..." aria-label="Buscar perfumes por nombre o marca">
+        <input type="text" id="buscador-perfumes" placeholder="Buscar por nombre o marca..." aria-label="Buscar en el catálogo">
         <button class="buscador-limpiar" id="limpiar-busqueda" type="button" aria-label="Limpiar búsqueda">✕</button>
       </div>
 
@@ -117,20 +117,41 @@
         </div>
 
         <div class="tab-panel activo" id="perfumes">
+          <div class="filtros" id="filtros-perfumes" aria-label="Filtros de perfumes">
+            <div class="filtro-grupo">
+              <span class="filtro-titulo">Marca</span>
+              <div class="chips" id="chips-marca"></div>
+            </div>
+            <div class="filtro-grupo">
+              <span class="filtro-titulo">Letra inicial</span>
+              <div class="letras" id="letras-perfumes"></div>
+            </div>
+            <div class="filtros-pie">
+              <span class="filtros-resumen" id="resumen-perfumes" aria-live="polite"></span>
+              <button class="filtros-limpiar" id="limpiar-perfumes" type="button">Limpiar filtros</button>
+            </div>
+          </div>
           <div class="productos" id="productos"></div>
           <noscript><p class="sin-js">Activa JavaScript para ver el catálogo de perfumes.</p></noscript>
         </div>
 
         <div class="tab-panel" id="otros">
-          <div class="proximamente">
-            <span class="proximamente-ornamento" aria-hidden="true">✦</span>
-            <h3 class="proximamente-titulo">Próximamente</h3>
-            <p class="proximamente-texto">
-              Estamos preparando una selección exclusiva de accesorios y productos de
-              cuidado personal. Nuevos productos llegarán muy pronto a Kenshua.
-            </p>
-            <span class="linea-oro proximamente-linea"></span>
+          <div class="filtros" id="filtros-otros" aria-label="Filtros de productos varios">
+            <div class="filtro-grupo">
+              <span class="filtro-titulo">Categoría</span>
+              <div class="chips" id="chips-categoria"></div>
+            </div>
+            <div class="filtro-grupo">
+              <span class="filtro-titulo">Letra inicial</span>
+              <div class="letras" id="letras-otros"></div>
+            </div>
+            <div class="filtros-pie">
+              <span class="filtros-resumen" id="resumen-otros" aria-live="polite"></span>
+              <button class="filtros-limpiar" id="limpiar-otros" type="button">Limpiar filtros</button>
+            </div>
           </div>
+          <div class="productos" id="productos-varios"></div>
+          <noscript><p class="sin-js">Activa JavaScript para ver los productos varios.</p></noscript>
         </div>
       </div>
     </section>
